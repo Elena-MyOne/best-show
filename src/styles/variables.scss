@@ -1,0 +1,29 @@
+$maxWidthContainer: 1400px;
+$minWidth: 320px;
+$maxWidth: 1440px;
+$md1: $maxWidthContainer + 20;
+$md2: 992.98;
+$md3: 767.98;
+$md4: 479.98;
+
+$fontSize: 18px;
+$fontFamily: 'Hind', sans;
+
+$fontColor: #ffffff;
+$bgColor: #0f1014;
+$borderColor: #21242b;
+$hoverColor: #ec8f32;
+$hoverActiveColor: #169a9a;
+$errorColor: rgba(181, 26, 26, 1);
+
+$transition: all 0.3s ease 0s;
+
+@mixin border {
+  border-radius: 50px;
+  border: 2px solid $fontColor;
+  transition: $transition;
+  cursor: pointer;
+  &:hover {
+    border: 2px solid $hoverColor;
+  }
+}
