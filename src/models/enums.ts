@@ -1,5 +1,8 @@
 export enum ROUTER_PATHS {
   HOME = '/',
+  SEARCH = 'search/shows',
+  SHOWS = 'shows',
+  DETAILS = '/shows/details/:id',
   NOTFOUND = '*',
 }
 

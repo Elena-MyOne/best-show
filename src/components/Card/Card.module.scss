@@ -1,0 +1,79 @@
+@import '../../styles/variables.scss';
+
+.error {
+  text-align: center;
+}
+
+.card {
+  position: relative;
+  cursor: pointer;
+  transition: 0.5s;
+  width: 210px;
+  color: $fontColor;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.card:hover .top {
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 1;
+  width: 100%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.image {
+  img {
+    border-radius: 5px;
+  }
+}
+
+.top {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.name {
+  padding-top: 15px;
+  text-align: center;
+}
+
+.rating {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.average {
+  font-size: 20px;
+}
+
+.genres {
+  padding: 0px 20px;
+  text-align: center;
+  line-height: 1.2em;
+}
+
+.years {
+  padding-bottom: 30px;
+}
+
+.cover {
+  width: 210px;
+  height: 295px;
+  background-color: $hoverActiveColor;
+  border-radius: 5px;
+  opacity: 0.4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

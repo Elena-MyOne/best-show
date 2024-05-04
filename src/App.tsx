@@ -10,6 +10,7 @@ function App() {
     <Routes>
       <Route path={ROUTER_PATHS.HOME} element={<Layout />}>
         <Route path={ROUTER_PATHS.HOME} element={<Home />}></Route>
+        <Route path={ROUTER_PATHS.SHOWS} element={<Home />}></Route>
         <Route path={ROUTER_PATHS.NOTFOUND} element={<NotFound />}></Route>
       </Route>
     </Routes>
