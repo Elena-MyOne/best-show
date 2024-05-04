@@ -77,3 +77,14 @@ html {
 .title {
   font-size: 1.2em;
 }
+
+.link {
+  color: $hoverColor;
+  transition: $transition;
+  &:hover {
+    color: $hoverActiveColor;
+  }
+  &:active {
+    opacity: 0.8;
+  }
+}
