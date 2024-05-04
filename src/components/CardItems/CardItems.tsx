@@ -2,9 +2,8 @@ import React from 'react';
 import style from './CardItems.module.scss';
 import { SearchShowsData, ShowData } from '../../models/interfaces';
 import Card from '../Card/Card';
-import { useDispatch, useSelector } from 'react-redux';
-import { selectShows, setIsCardItemsDarked } from '../../redux/slices/ShowsSlice';
-import { AppDispatch } from '../../redux/store';
+import { useSelector } from 'react-redux';
+import { selectShows } from '../../redux/slices/ShowsSlice';
 
 interface CardItemsProps {
   shows: ShowData[] | SearchShowsData[];
@@ -12,7 +11,6 @@ interface CardItemsProps {
 
 const CardItems: React.FC<CardItemsProps> = ({ shows }) => {
   const { isCardItemsDarked } = useSelector(selectShows);
-  const dispatch = useDispatch<AppDispatch>();
 
   return (
     <div className={style.items}>
@@ -21,22 +19,10 @@ const CardItems: React.FC<CardItemsProps> = ({ shows }) => {
           {shows.map((item) => {
             if (Object.prototype.hasOwnProperty.call(item, 'show')) {
               const showItem = item as SearchShowsData;
-              return (
-                <Card
-                  key={showItem.show.id}
-                  show={showItem.show}
-                  setIsCardItemsDarked={() => dispatch(setIsCardItemsDarked(true))}
-                />
-              );
+              return <Card key={showItem.show.id} show={showItem.show} />;
             } else {
               const show = item as ShowData;
-              return (
-                <Card
-                  key={show.id}
-                  show={show}
-                  setIsCardItemsDarked={() => dispatch(setIsCardItemsDarked(true))}
-                />
-              );
+              return <Card key={show.id} show={show} />;
             }
           })}
         </div>

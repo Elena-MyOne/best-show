@@ -6,29 +6,19 @@ import { Link } from 'react-router-dom';
 
 interface CardProps {
   show: ShowData | null;
-  setIsCardItemsDarked: React.Dispatch<React.SetStateAction<boolean>> | undefined;
 }
 
-const Card: React.FC<CardProps> = ({ show, setIsCardItemsDarked }) => {
+const Card: React.FC<CardProps> = ({ show }) => {
   const years = `${show && show.premiered ? show.premiered.slice(0, 4) : ''} ${
     show && show.ended ? '- ' + show.ended.slice(0, 4) : ''
   } `;
 
   const image = show && show.image?.medium;
 
-  const setDarkBackground = () => {
-    if (setIsCardItemsDarked) setIsCardItemsDarked(true);
-  };
-
   return (
     <>
       {show ? (
-        <Link
-          to={`/shows/details/${show.id}`}
-          className={style.card}
-          onClick={setDarkBackground}
-          data-testid="card"
-        >
+        <Link to={`/shows/details/${show.id}`} className={style.card} data-testid="card">
           <div className={style.image}>
             {image ? (
               <img src={image} alt="cover" />

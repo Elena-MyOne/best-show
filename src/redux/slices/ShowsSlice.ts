@@ -12,7 +12,6 @@ export interface SearchState {
   isError: boolean;
 
   switchMoreShows: boolean;
-  isCardItemsDarked: boolean;
 
   currentPage: number;
   apiCallPage: number;
@@ -28,7 +27,6 @@ const initialState: SearchState = {
   isError: false,
 
   switchMoreShows: false,
-  isCardItemsDarked: false,
 
   currentPage: 0,
   apiCallPage: 0,
@@ -49,9 +47,6 @@ export const SearchSlice = createSlice({
     },
     setSwitchMoreShows(state, action: PayloadAction<boolean>) {
       state.switchMoreShows = action.payload;
-    },
-    setIsCardItemsDarked(state, action: PayloadAction<boolean>) {
-      state.isCardItemsDarked = action.payload;
     },
     setIsIsLoading(state, action: PayloadAction<boolean>) {
       state.isLoading = action.payload;
@@ -95,7 +90,6 @@ export const {
   setSearchValue,
   setShows,
   setSwitchMoreShows,
-  setIsCardItemsDarked,
   setIsIsLoading,
   setIsError,
   setCurrentPage,

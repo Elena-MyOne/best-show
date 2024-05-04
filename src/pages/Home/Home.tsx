@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useLoadShowsQuery, useSearchShowsQuery } from '../../redux/api/apiSlice';
 import style from './Home.module.scss';
-import { Outlet, useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch } from '../../redux/store';
 import {
@@ -9,7 +9,6 @@ import {
   loadShows,
   selectShows,
   setCurrentPage,
-  setIsCardItemsDarked,
   setSwitchMoreShows,
 } from '../../redux/slices/ShowsSlice';
 import { ROUTER_PATHS } from '../../models/enums';
@@ -26,8 +25,7 @@ const Home: React.FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const { shows, searchValue, apiCallPage, isLoading, isCardItemsDarked } =
-    useSelector(selectShows);
+  const { shows, searchValue, apiCallPage, isLoading } = useSelector(selectShows);
   const dispatch = useDispatch<AppDispatch>();
 
   const {
@@ -41,27 +39,14 @@ const Home: React.FC = () => {
   useEffect(() => {
     if (searchValue) {
       searchShowsData && dispatch(handleSearch(searchShowsData));
-      if (!isCardItemsDarked) {
-        navigate(`/${ROUTER_PATHS.SEARCH}?q=${encodeURIComponent(searchValue)}`);
-      }
+      navigate(`/${ROUTER_PATHS.SEARCH}?q=${encodeURIComponent(searchValue)}`);
     } else {
       showsData && dispatch(loadShows(showsData));
-      if (!isCardItemsDarked) {
-        navigate(`/${ROUTER_PATHS.SHOWS}?page=${encodeURIComponent(apiCallPage)}`);
-      }
+      navigate(`/${ROUTER_PATHS.SHOWS}?page=${encodeURIComponent(apiCallPage)}`);
     }
 
     dispatch(setSwitchMoreShows(shows.length <= DEFAULT_ITEMS_PER_PAGE));
-  }, [
-    searchValue,
-    searchShowsData,
-    showsData,
-    dispatch,
-    navigate,
-    apiCallPage,
-    shows.length,
-    isCardItemsDarked,
-  ]);
+  }, [searchValue, searchShowsData, showsData, dispatch, navigate, apiCallPage, shows.length]);
 
   const currentPageItems = shows && shows.slice(0, DEFAULT_ITEMS_PER_PAGE);
 
@@ -75,7 +60,6 @@ const Home: React.FC = () => {
     const path = location.pathname;
     if (path.includes('details')) {
       navigate(`${ROUTER_PATHS.HOME}`);
-      dispatch(setIsCardItemsDarked(false));
     }
   };
 
@@ -84,11 +68,9 @@ const Home: React.FC = () => {
       <>
         <div className={style.top}>
           <h1 className="title">Shows List</h1>
-          {!isCardItemsDarked && (
-            <div className="pagination">
-              {shows && shows.length < ITEMS_PER_PAGE ? null : <Pagination />}
-            </div>
-          )}
+          <div className="pagination">
+            {shows && shows.length < ITEMS_PER_PAGE ? null : <Pagination />}
+          </div>
         </div>
       </>
       {isLoadingMainPage || isLoading ? (
@@ -105,10 +87,6 @@ const Home: React.FC = () => {
             ) : (
               <div className={style.nothing}>Upsy, nothing to show &#128550;</div>
             )}
-
-            <div className={style.details}>
-              <Outlet />
-            </div>
           </div>
 
           {!isLoadingMainPage && (
