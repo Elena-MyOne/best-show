@@ -36,3 +36,11 @@
 .dots {
   font-size: 18px;
 }
+
+.next,
+.prev {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 9px !important;
+}

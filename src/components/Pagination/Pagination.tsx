@@ -11,6 +11,7 @@ import {
 } from '../../redux/slices/ShowsSlice';
 import { useLoadShowsQuery } from '../../redux/api/apiSlice';
 import { LAST_PAGE } from '../../constants/page.constants';
+import { MdOutlineArrowBackIos, MdOutlineArrowForwardIos } from 'react-icons/md';
 
 const Pagination: React.FC = () => {
   const [isNextDisabled, setIsNextDisabled] = useState<boolean>(false);
@@ -63,7 +64,7 @@ const Pagination: React.FC = () => {
   return (
     <div className={style.buttons}>
       <button className={style.prev} disabled={isPrevDisabled} onClick={handlePrevButton}>
-        prev
+        <MdOutlineArrowBackIos />
       </button>
 
       <button className={style.current}>{currentPage + 1}</button>
@@ -88,7 +89,7 @@ const Pagination: React.FC = () => {
         onClick={handleNextButton}
         data-testid="next"
       >
-        next
+        <MdOutlineArrowForwardIos />
       </button>
     </div>
   );
