@@ -9,7 +9,7 @@ $md4: 479.98;
 $fontSize: 18px;
 $fontFamily: 'Hind', sans;
 
-$fontColor: #ffffff;
+$fontColor: #f0ecec;
 $bgColor: #0f1014;
 $borderColor: #21242b;
 $hoverColor: #ec8f32;
@@ -26,4 +26,8 @@ $transition: all 0.3s ease 0s;
   &:hover {
     border: 2px solid $hoverColor;
   }
+}
+
+@mixin splitter {
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
 }

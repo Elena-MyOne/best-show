@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import style from './Header.module.scss';
 import { ROUTER_PATHS } from '../../models/enums';
-import { Link, useNavigate } from 'react-router-dom';
-import { MdLocalMovies } from 'react-icons/md';
+import { useNavigate } from 'react-router-dom';
 import { BsSearch } from 'react-icons/bs';
 import { getSearchValueFromLocalStorage } from '../../utils/getSearchValueFromLocalStorage';
 import { useDispatch, useSelector } from 'react-redux';
@@ -14,6 +13,7 @@ import {
 } from '../../redux/slices/ShowsSlice';
 import { AppDispatch } from '../../redux/store';
 import { useSearchShowsQuery } from '../../redux/api/apiSlice';
+import Logo from '../Logo/Logo';
 
 const Header: React.FC = () => {
   const [inputValue, setInputValue] = useState<string>(getSearchValueFromLocalStorage());
@@ -46,10 +46,7 @@ const Header: React.FC = () => {
   return (
     <header className={style.header}>
       <div className={`${style.body} container`}>
-        <Link to={ROUTER_PATHS.HOME} className={style.logo}>
-          <MdLocalMovies />
-          <span className={style.text}>Shows</span>
-        </Link>
+        <Logo />
         <form className={style.search} onSubmit={handleSearchForm} data-testid="search-form">
           <input
             type="text"
