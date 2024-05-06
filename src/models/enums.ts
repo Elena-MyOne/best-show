@@ -3,6 +3,7 @@ export enum ROUTER_PATHS {
   SEARCH = 'search/shows',
   SHOWS = 'shows',
   DETAILS = '/shows/details/:id',
+  PEOPLE = 'search/people',
   NOTFOUND = '*',
 }
 

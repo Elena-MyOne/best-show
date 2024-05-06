@@ -18,30 +18,44 @@ footer {
 }
 
 .logo {
-  @media (max-width: 500px) {
+  @media (max-width: ($md3+px)) {
     display: none;
   }
 }
 
-.title {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-
-.genre,
-.categories {
-  text-align: left;
-}
-
-.item {
-  opacity: 0.7;
-  cursor: pointer;
-  transition: $transition;
-  &:not(:last-child) {
-    margin-bottom: 15px;
+.form {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  @media (max-width: ($md3+px)) {
+    width: 100%;
   }
+}
+
+.input {
+  padding: 5px 35px 5px 10px;
+  @include border;
+  background-color: rgba(0, 0, 0, 0.92);
+  font-size: inherit;
+  color: inherit;
+  &:focus {
+    background-color: rgba(0, 0, 0, 0.92);
+  }
+  @media (max-width: ($md3+px)) {
+    flex: 1 1 auto;
+  }
+}
+
+.button {
+  color: inherit;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 1.1rem;
+  transition: $transition;
   &:hover {
-    opacity: 1;
+    color: $hoverColor;
   }
 }
 

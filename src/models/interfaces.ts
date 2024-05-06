@@ -66,3 +66,32 @@ interface LinksData {
   self: { href: string };
   previousepisode: { href: string };
 }
+
+export interface SearchPeopleData {
+  score: number;
+  person: PersonData;
+}
+
+interface PersonData {
+  id: number;
+  url: string;
+  name: string;
+  country: {
+    name: string;
+    code: string;
+    timezone: string;
+  };
+  birthday: null;
+  deathday: null;
+  gender: string;
+  image: {
+    medium: string;
+    original: string;
+  };
+  updated: number;
+  _links: {
+    self: {
+      href: string;
+    };
+  };
+}

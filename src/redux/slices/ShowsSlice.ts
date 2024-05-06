@@ -86,6 +86,7 @@ export const SearchSlice = createSlice({
 });
 
 export const selectShows = (state: RootState): SearchState => state.shows;
+
 export const {
   setSearchValue,
   setShows,
@@ -99,4 +100,5 @@ export const {
   loadShows,
   handleSearch,
 } = SearchSlice.actions;
+
 export default SearchSlice.reducer;
