@@ -8,8 +8,6 @@ interface CastProps {
 }
 
 const Cast: React.FC<CastProps> = ({ cast }) => {
-  console.log(cast);
-
   return (
     <>
       <div className={style.cards}>
