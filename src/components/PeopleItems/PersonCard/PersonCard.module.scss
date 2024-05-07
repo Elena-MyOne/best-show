@@ -1,0 +1,47 @@
+@import '../../../styles/variables.scss';
+
+.person {
+  --border-r: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: var(--border-r);
+}
+
+.image {
+  img {
+    border-radius: var(--border-r);
+  }
+}
+
+.name {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.body {
+  display: flex;
+  gap: 20px;
+  @media (max-width: ($md2+px)) {
+    flex-direction: column;
+  }
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+}
+
+.cover {
+  width: 210px;
+  height: 295px;
+  background-color: $hoverActiveColor;
+  color: $bgColor;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-r);
+}

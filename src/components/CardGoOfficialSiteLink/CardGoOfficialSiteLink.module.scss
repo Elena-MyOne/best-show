@@ -1,0 +1,10 @@
+@import '../../styles/variables.scss';
+
+.link a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  @media (max-width: ($md3+px)) {
+    justify-content: center;
+  }
+}

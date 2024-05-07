@@ -1,0 +1,65 @@
+@import '../../styles/variables.scss';
+
+footer {
+  background: rgba(0, 0, 0, 0.92);
+  padding: 40px 0px;
+}
+
+.body {
+  text-align: center;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.logo {
+  @media (max-width: ($md3+px)) {
+    display: none;
+  }
+}
+
+.form {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  @media (max-width: ($md3+px)) {
+    width: 100%;
+  }
+}
+
+.input {
+  padding: 5px 35px 5px 10px;
+  @include border;
+  background-color: rgba(0, 0, 0, 0.92);
+  font-size: inherit;
+  color: inherit;
+  &:focus {
+    background-color: rgba(0, 0, 0, 0.92);
+  }
+  @media (max-width: ($md3+px)) {
+    flex: 1 1 auto;
+  }
+}
+
+.button {
+  color: inherit;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 1.1rem;
+  transition: $transition;
+  &:hover {
+    color: $hoverColor;
+  }
+}
+
+.developed {
+  @include splitter;
+  padding-top: 40px;
+}

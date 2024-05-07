@@ -1,0 +1,27 @@
+@import '../../styles/variables.scss';
+
+.top {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px 0px;
+  @media (max-width: ($md3+px)) {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
+.content {
+  display: flex;
+}
+
+.items {
+  flex-wrap: 1 1 auto;
+}
+
+.nothing {
+  text-align: center;
+  flex: 1 1 auto;
+  padding: 40px 0px 100px;
+  color: $hoverColor;
+}
