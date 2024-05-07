@@ -1,7 +1,7 @@
 import React from 'react';
 import { PersonData } from '../../../models/interfaces';
 import style from './PersonCard.module.scss';
-import { GoLinkExternal } from 'react-icons/go';
+import CardGoOfficialSiteLink from '../../CardGoOfficialSiteLink/CardGoOfficialSiteLink';
 
 interface PersonCardProps {
   person: PersonData;
@@ -21,14 +21,7 @@ const PersonCard: React.FC<PersonCardProps> = ({ person }) => {
           {person.birthday && <div className={style.gender}>Birthday: {person.birthday}</div>}
           {person.deathday && <div className={style.gender}>Death date: {person.deathday}</div>}
           {person.country && <div className={style.country}>Country: {person.name}</div>}
-          <div className={style.link}>
-            <a href={person.url} className="link" target="_blank" rel="noopener noreferrer">
-              <span>
-                <GoLinkExternal />
-              </span>
-              <span>Go to official site</span>
-            </a>
-          </div>
+          <CardGoOfficialSiteLink url={person.url} />
         </div>
       </div>
     </div>

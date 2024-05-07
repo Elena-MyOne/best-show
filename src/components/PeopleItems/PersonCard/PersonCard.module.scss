@@ -34,15 +34,6 @@
   justify-content: center;
 }
 
-.link a {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  @media (max-width: ($md3+px)) {
-    justify-content: center;
-  }
-}
-
 .cover {
   width: 210px;
   height: 295px;

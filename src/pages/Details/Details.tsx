@@ -5,8 +5,9 @@ import { GoLinkExternal } from 'react-icons/go';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useGetShowByIdQuery } from '../../redux/api/apiSlice';
 import { ROUTER_PATHS } from '../../models/enums';
-import { ShowData } from '../../models/interfaces';
+import { CastData, ShowData } from '../../models/interfaces';
 import Spinner from '../../components/Spinner/Spinner';
+import Cast from './Cast/Cast';
 
 const Details: React.FC = () => {
   const noDate = 'no data to show';
@@ -22,6 +23,7 @@ const Details: React.FC = () => {
     premiered: '',
     ended: '',
     officialSite: '',
+    cast: [] as CastData[],
   });
 
   const { id } = useParams();
@@ -41,6 +43,7 @@ const Details: React.FC = () => {
 
       if (isSuccess) {
         const image = data.image?.original || '';
+        const cast = data._embedded.cast || [];
 
         setShow((prevShow) => ({
           ...prevShow,
@@ -54,6 +57,7 @@ const Details: React.FC = () => {
           premiered: data.premiered,
           ended: data.ended,
           officialSite: data.officialSite,
+          cast,
         }));
       }
     },
@@ -77,45 +81,55 @@ const Details: React.FC = () => {
           <Spinner />
         </div>
       ) : (
-        <div className={style.body} data-testid="details">
-          <div className={style.details} data-testid="details-image">
-            <div className={style.image}>
-              {show.image ? (
-                <img src={show.image} alt="cover" />
-              ) : (
-                <div className={style.cover}>Best TV Show</div>
-              )}
-            </div>
-            <div className={style.info}>
-              <div className={style.name} data-testid="details-name">
-                {show.name}
-              </div>
-              <div className={style.rating} data-testid="details-rating">
-                <AiFillStar />
-                {show.rating ? (
-                  <span className={style.average}>{show.rating}</span>
+        <>
+          <div className={style.body} data-testid="details">
+            <div className={style.details} data-testid="details-image">
+              <div className={style.image}>
+                {show.image ? (
+                  <img src={show.image} alt="cover" />
                 ) : (
-                  <span className={style.average}>Not rated</span>
+                  <div className={style.cover}>Best TV Show</div>
                 )}
               </div>
-              <div className={style.language}>Language: {show.language}</div>
-              {show.genres && <div className={style.genres}>Genres: {show.genres.join(', ')}</div>}
-              <div className={style.years}>{years}</div>
-              {show.officialSite && (
-                <a href={show.officialSite} className={style.link} target="_blank" rel="noreferrer">
-                  <GoLinkExternal />
-                  <span>Go to official site</span>
-                </a>
-              )}
+              <div className={style.info}>
+                <div className={style.name} data-testid="details-name">
+                  {show.name}
+                </div>
+                <div className={style.rating} data-testid="details-rating">
+                  <AiFillStar />
+                  {show.rating ? (
+                    <span className={style.average}>{show.rating}</span>
+                  ) : (
+                    <span className={style.average}>Not rated</span>
+                  )}
+                </div>
+                <div className={style.language}>Language: {show.language}</div>
+                {show.genres && (
+                  <div className={style.genres}>Genres: {show.genres.join(', ')}</div>
+                )}
+                <div className={style.years}>{years}</div>
+                {show.officialSite && (
+                  <a
+                    href={show.officialSite}
+                    className={style.link}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <GoLinkExternal />
+                    <span>Go to official site</span>
+                  </a>
+                )}
+              </div>
             </div>
+            <div className={style.summary} data-testid="details-summary">
+              <div dangerouslySetInnerHTML={{ __html: show.summary }} />
+            </div>
+            <button className="button" onClick={goBack}>
+              Go Back
+            </button>
           </div>
-          <div className={style.summary} data-testid="details-summary">
-            <div dangerouslySetInnerHTML={{ __html: show.summary }} />
-          </div>
-          <button className="button" onClick={goBack}>
-            Go Back
-          </button>
-        </div>
+          <Cast cast={show.cast} />
+        </>
       )}
     </>
   );

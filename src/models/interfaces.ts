@@ -27,6 +27,16 @@ export interface ShowData {
   summary: string;
   updated: number;
   _links: LinksData;
+  _embedded: {
+    cast: CastData[];
+  };
+}
+
+export interface CastData {
+  person: PersonData;
+  character: CharacterData;
+  self: boolean;
+  voice: boolean;
 }
 
 interface ScheduleData {
@@ -65,6 +75,21 @@ interface ImageData {
 interface LinksData {
   self: { href: string };
   previousepisode: { href: string };
+}
+
+interface CharacterData {
+  id: number;
+  url: string;
+  name: string;
+  image: {
+    medium: string;
+    original: string;
+  };
+  _links: {
+    self: {
+      href: string;
+    };
+  };
 }
 
 export interface SearchPeopleData {

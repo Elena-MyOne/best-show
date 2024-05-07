@@ -13,7 +13,7 @@ export const apiSlice = createApi({
       query: (searchValue) => `search/shows?q=${searchValue}`,
     }),
     getShowById: builder.query<ShowData, string>({
-      query: (id) => `shows/${id}`,
+      query: (id) => `shows/${id}?embed=cast`,
     }),
     searchPeople: builder.query<SearchPeopleData[], string>({
       query: (searchValue) => `search/people?q=${searchValue}`,
