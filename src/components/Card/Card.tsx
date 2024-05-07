@@ -23,7 +23,7 @@ const Card: React.FC<CardProps> = ({ show }) => {
             {image ? (
               <img src={image} alt="cover" />
             ) : (
-              <div className={style.cover}>My Best TV Show</div>
+              <div className={style.cover}>Best TV Show</div>
             )}
 
             <div className={style.top}>

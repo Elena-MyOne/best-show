@@ -2,16 +2,9 @@ import React, { useState } from 'react';
 import style from './Footer.module.scss';
 import Logo from '../Logo/Logo';
 import { BsSearch } from 'react-icons/bs';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { AppDispatch } from '../../redux/store';
-import {
-  selectPeople,
-  setIsError,
-  setIsIsLoading,
-  setPeople,
-  setSearchPerson,
-} from '../../redux/slices/PeopleSlice';
-import { useSearchPeopleQuery } from '../../redux/api/apiSlice';
+import { setSearchPerson } from '../../redux/slices/PeopleSlice';
 import { useNavigate } from 'react-router-dom';
 import { ROUTER_PATHS } from '../../models/enums';
 
@@ -19,8 +12,6 @@ const Footer: React.FC = () => {
   const [inputValue, setInputValue] = useState<string>('');
 
   const dispatch = useDispatch<AppDispatch>();
-  const { searchPerson } = useSelector(selectPeople);
-  const { data, isError } = useSearchPeopleQuery(searchPerson);
   const navigate = useNavigate();
 
   const handleChange = (event: React.FormEvent<HTMLInputElement>) => {
@@ -30,20 +21,13 @@ const Footer: React.FC = () => {
 
   const handleActorSearch = (event: React.FormEvent) => {
     event.preventDefault();
-    console.log(inputValue);
+    handleButtonClick();
+  };
 
+  const handleButtonClick = () => {
+    dispatch(setSearchPerson(inputValue));
     if (inputValue) {
-      console.log(data);
-      dispatch(setIsIsLoading(true));
-      dispatch(setSearchPerson(inputValue));
-      if (data) {
-        dispatch(setPeople(data));
-        navigate(`/${ROUTER_PATHS.PEOPLE}?q=${encodeURIComponent(inputValue)}`);
-      }
-      if (isError) {
-        dispatch(setIsError(isError));
-      }
-      dispatch(setIsIsLoading(false));
+      navigate(`/${ROUTER_PATHS.PEOPLE}?q=${encodeURIComponent(inputValue)}`);
     }
   };
 
@@ -64,9 +48,9 @@ const Footer: React.FC = () => {
                 value={inputValue}
                 placeholder="Name"
                 className={style.input}
-                autoComplete="false"
+                autoComplete="off"
               />
-              <button className={style.button} onClick={handleActorSearch}>
+              <button className={style.button} onClick={handleButtonClick}>
                 <BsSearch />
               </button>
             </form>

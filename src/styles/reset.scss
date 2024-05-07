@@ -55,6 +55,9 @@ input::-ms-clear {
 button {
   cursor: pointer;
   background-color: inherit;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
 }
 button::-moz-focus-inner {
   padding: 0;

@@ -1,0 +1,49 @@
+@import '../../styles/variables.scss';
+
+.section {
+  margin: 40px 0px;
+  @media (max-width: ($md3+px)) {
+    margin: 20px 0px;
+  }
+}
+
+.button {
+  position: relative;
+  padding-left: 25px;
+  color: $hoverColor;
+  cursor: pointer;
+  transition: $transition;
+  &:hover {
+    color: $hoverActiveColor;
+  }
+
+  svg {
+    position: absolute;
+    top: 5px;
+    left: 0px;
+  }
+}
+
+.title {
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 40px 0px;
+}
+
+.span {
+  color: $hoverColor;
+  font-weight: 500;
+}
+
+.empty {
+  text-align: center;
+  margin: 40px 0px;
+}
+
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  color: $errorColor;
+}

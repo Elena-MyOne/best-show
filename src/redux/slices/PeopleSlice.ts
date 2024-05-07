@@ -24,12 +24,9 @@ export const PeopleSlice = createSlice({
       state.searchPerson = action.payload;
     },
     setPeople(state, action: PayloadAction<SearchPeopleData[]>) {
-      if (!state.searchPerson) {
-        return;
-      }
       state.people = action.payload;
     },
-    setIsIsLoading(state, action: PayloadAction<boolean>) {
+    setIsLoading(state, action: PayloadAction<boolean>) {
       state.isLoading = action.payload;
     },
     setIsError(state, action: PayloadAction<boolean>) {
@@ -39,5 +36,5 @@ export const PeopleSlice = createSlice({
 });
 
 export const selectPeople = (state: RootState): SearchPeopleState => state.people;
-export const { setSearchPerson, setPeople, setIsIsLoading, setIsError } = PeopleSlice.actions;
+export const { setSearchPerson, setPeople, setIsLoading, setIsError } = PeopleSlice.actions;
 export default PeopleSlice.reducer;

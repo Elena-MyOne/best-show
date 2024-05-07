@@ -2,16 +2,12 @@ import React from 'react';
 import style from './CardItems.module.scss';
 import { SearchShowsData, ShowData } from '../../models/interfaces';
 import Card from '../Card/Card';
-import { useSelector } from 'react-redux';
-import { selectShows } from '../../redux/slices/ShowsSlice';
 
 interface CardItemsProps {
   shows: ShowData[] | SearchShowsData[];
 }
 
 const CardItems: React.FC<CardItemsProps> = ({ shows }) => {
-  const { isCardItemsDarked } = useSelector(selectShows);
-
   return (
     <div className={style.items}>
       {Array.isArray(shows) && shows.length > 0 && (
@@ -27,7 +23,6 @@ const CardItems: React.FC<CardItemsProps> = ({ shows }) => {
           })}
         </div>
       )}
-      {isCardItemsDarked && <div className={style.back}></div>}
     </div>
   );
 };

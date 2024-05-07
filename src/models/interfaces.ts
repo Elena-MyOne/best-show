@@ -72,7 +72,7 @@ export interface SearchPeopleData {
   person: PersonData;
 }
 
-interface PersonData {
+export interface PersonData {
   id: number;
   url: string;
   name: string;
@@ -81,13 +81,13 @@ interface PersonData {
     code: string;
     timezone: string;
   };
-  birthday: null;
-  deathday: null;
+  birthday: null | number;
+  deathday: null | number;
   gender: string;
   image: {
     medium: string;
     original: string;
-  };
+  } | null;
   updated: number;
   _links: {
     self: {

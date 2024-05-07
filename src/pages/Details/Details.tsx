@@ -83,7 +83,7 @@ const Details: React.FC = () => {
               {show.image ? (
                 <img src={show.image} alt="cover" />
               ) : (
-                <div className={style.cover}>My Best TV Show</div>
+                <div className={style.cover}>Best TV Show</div>
               )}
             </div>
             <div className={style.info}>
