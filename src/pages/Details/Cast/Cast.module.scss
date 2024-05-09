@@ -1,5 +1,15 @@
 @import '../../../styles/variables.scss';
 
+.cast {
+  padding: 40px 0px 0px 0px;
+}
+
+.title {
+  text-align: center;
+  font-size: 1.5rem;
+  color: $hoverColor;
+}
+
 .cards {
   margin: 40px 0px;
   display: grid;

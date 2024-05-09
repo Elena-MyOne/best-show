@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { URL } from '../../models/enums';
-import { SearchPeopleData, SearchShowsData, ShowData } from '../../models/interfaces';
+import { EpisodeData, SearchPeopleData, SearchShowsData, ShowData } from '../../models/interfaces';
 
 export const apiSlice = createApi({
   reducerPath: 'api',
@@ -18,8 +18,16 @@ export const apiSlice = createApi({
     searchPeople: builder.query<SearchPeopleData[], string>({
       query: (searchValue) => `search/people?q=${searchValue}`,
     }),
+    loadEpisodes: builder.query<EpisodeData[], string>({
+      query: (id) => `shows/${id}/episodes`,
+    }),
   }),
 });
 
-export const { useLoadShowsQuery, useSearchShowsQuery, useGetShowByIdQuery, useSearchPeopleQuery } =
-  apiSlice;
+export const {
+  useLoadShowsQuery,
+  useSearchShowsQuery,
+  useGetShowByIdQuery,
+  useSearchPeopleQuery,
+  useLoadEpisodesQuery,
+} = apiSlice;

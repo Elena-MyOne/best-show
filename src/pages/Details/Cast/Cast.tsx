@@ -9,7 +9,8 @@ interface CastProps {
 
 const Cast: React.FC<CastProps> = ({ cast }) => {
   return (
-    <>
+    <section className={style.cast}>
+      <h3 className={style.title}>Cast</h3>
       <div className={style.cards}>
         {cast.map((item) => (
           <div key={item.character.id} className={style.card}>
@@ -36,7 +37,7 @@ const Cast: React.FC<CastProps> = ({ cast }) => {
           </div>
         ))}
       </div>
-    </>
+    </section>
   );
 };
 
