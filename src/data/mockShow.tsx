@@ -426,3 +426,393 @@ export const mockShow = {
     ],
   },
 };
+
+const mockShow2 = {
+  id: 207,
+  url: 'https://www.tvmaze.com/shows/207/stargate-universe',
+  name: 'Stargate Universe',
+  type: 'Scripted',
+  language: 'English',
+  genres: ['Action', 'Adventure', 'Science-Fiction'],
+  status: 'Ended',
+  runtime: 60,
+  averageRuntime: 60,
+  premiered: '2009-10-02',
+  ended: '2011-05-09',
+  officialSite: 'http://stargate.mgm.com/view/series/3/index.html',
+  schedule: {
+    time: '21:00',
+    days: ['Monday'],
+  },
+  rating: {
+    average: 8.2,
+  },
+  weight: 90,
+  network: {
+    id: 16,
+    name: 'Syfy',
+    country: {
+      name: 'United States',
+      code: 'US',
+      timezone: 'America/New_York',
+    },
+    officialSite: null,
+  },
+  webChannel: null,
+  dvdCountry: null,
+  externals: {
+    tvrage: 15343,
+    thetvdb: 83237,
+    imdb: 'tt1286039',
+  },
+  image: {
+    medium: 'https://static.tvmaze.com/uploads/images/medium_portrait/81/204195.jpg',
+    original: 'https://static.tvmaze.com/uploads/images/original_untouched/81/204195.jpg',
+  },
+  summary:
+    "<p><b>Stargate Universe</b> follows a band of soldiers, scientists and civilians, who must fend for themselves as they are forced through a Stargate when their hidden base comes under attack. The desperate survivors emerge aboard an ancient ship, which is locked on an unknown course and unable to return to Earth. Faced with meeting the most basic needs of food, water and air, the group must unlock the secrets of the ship's Stargate to survive. The danger, adventure and hope they find on board the Destiny will reveal the heroes and villains among them.</p>",
+  updated: 1704793964,
+  _links: {
+    self: {
+      href: 'https://api.tvmaze.com/shows/207',
+    },
+    previousepisode: {
+      href: 'https://api.tvmaze.com/episodes/13822',
+      name: 'Gauntlet',
+    },
+  },
+  _embedded: {
+    cast: [
+      {
+        person: {
+          id: 2918,
+          url: 'https://www.tvmaze.com/people/2918/robert-carlyle',
+          name: 'Robert Carlyle',
+          country: {
+            name: 'United Kingdom',
+            code: 'GB',
+            timezone: 'Europe/London',
+          },
+          birthday: '1961-04-14',
+          deathday: null,
+          gender: 'Male',
+          image: {
+            medium: 'https://static.tvmaze.com/uploads/images/medium_portrait/1/4224.jpg',
+            original: 'https://static.tvmaze.com/uploads/images/original_untouched/1/4224.jpg',
+          },
+          updated: 1698756230,
+          _links: {
+            self: {
+              href: 'https://api.tvmaze.com/people/2918',
+            },
+          },
+        },
+        character: {
+          id: 53165,
+          url: 'https://www.tvmaze.com/characters/53165/stargate-universe-dr-nicholas-rush',
+          name: 'Dr. Nicholas Rush',
+          image: {
+            medium: 'https://static.tvmaze.com/uploads/images/medium_portrait/1/3084.jpg',
+            original: 'https://static.tvmaze.com/uploads/images/original_untouched/1/3084.jpg',
+          },
+          _links: {
+            self: {
+              href: 'https://api.tvmaze.com/characters/53165',
+            },
+          },
+        },
+        self: false,
+        voice: false,
+      },
+      {
+        person: {
+          id: 10472,
+          url: 'https://www.tvmaze.com/people/10472/louis-ferreira',
+          name: 'Louis Ferreira',
+          country: {
+            name: 'Portugal',
+            code: 'PT',
+            timezone: 'Europe/Lisbon',
+          },
+          birthday: '1966-02-20',
+          deathday: null,
+          gender: 'Male',
+          image: {
+            medium: 'https://static.tvmaze.com/uploads/images/medium_portrait/3/8408.jpg',
+            original: 'https://static.tvmaze.com/uploads/images/original_untouched/3/8408.jpg',
+          },
+          updated: 1714827302,
+          _links: {
+            self: {
+              href: 'https://api.tvmaze.com/people/10472',
+            },
+          },
+        },
+        character: {
+          id: 53166,
+          url: 'https://www.tvmaze.com/characters/53166/stargate-universe-everett-young',
+          name: 'Everett Young',
+          image: {
+            medium: 'https://static.tvmaze.com/uploads/images/medium_portrait/1/3085.jpg',
+            original: 'https://static.tvmaze.com/uploads/images/original_untouched/1/3085.jpg',
+          },
+          _links: {
+            self: {
+              href: 'https://api.tvmaze.com/characters/53166',
+            },
+          },
+        },
+        self: false,
+        voice: false,
+      },
+      {
+        person: {
+          id: 15703,
+          url: 'https://www.tvmaze.com/people/15703/brian-j-smith',
+          name: 'Brian J. Smith',
+          country: {
+            name: 'United States',
+            code: 'US',
+            timezone: 'America/New_York',
+          },
+          birthday: '1981-10-12',
+          deathday: null,
+          gender: 'Male',
+          image: {
+            medium: 'https://static.tvmaze.com/uploads/images/medium_portrait/461/1152805.jpg',
+            original: 'https://static.tvmaze.com/uploads/images/original_untouched/461/1152805.jpg',
+          },
+          updated: 1687345438,
+          _links: {
+            self: {
+              href: 'https://api.tvmaze.com/people/15703',
+            },
+          },
+        },
+        character: {
+          id: 53167,
+          url: 'https://www.tvmaze.com/characters/53167/stargate-universe-matthew-scott',
+          name: 'Matthew Scott',
+          image: {
+            medium: 'https://static.tvmaze.com/uploads/images/medium_portrait/1/3086.jpg',
+            original: 'https://static.tvmaze.com/uploads/images/original_untouched/1/3086.jpg',
+          },
+          _links: {
+            self: {
+              href: 'https://api.tvmaze.com/characters/53167',
+            },
+          },
+        },
+        self: false,
+        voice: false,
+      },
+      {
+        person: {
+          id: 23398,
+          url: 'https://www.tvmaze.com/people/23398/elyse-levesque',
+          name: 'Elyse Levesque',
+          country: {
+            name: 'Canada',
+            code: 'CA',
+            timezone: 'America/Halifax',
+          },
+          birthday: '1985-09-10',
+          deathday: null,
+          gender: 'Female',
+          image: {
+            medium: 'https://static.tvmaze.com/uploads/images/medium_portrait/174/437205.jpg',
+            original: 'https://static.tvmaze.com/uploads/images/original_untouched/174/437205.jpg',
+          },
+          updated: 1709550579,
+          _links: {
+            self: {
+              href: 'https://api.tvmaze.com/people/23398',
+            },
+          },
+        },
+        character: {
+          id: 53168,
+          url: 'https://www.tvmaze.com/characters/53168/stargate-universe-chloe-armstrong',
+          name: 'Chloe Armstrong',
+          image: {
+            medium: 'https://static.tvmaze.com/uploads/images/medium_portrait/1/3088.jpg',
+            original: 'https://static.tvmaze.com/uploads/images/original_untouched/1/3088.jpg',
+          },
+          _links: {
+            self: {
+              href: 'https://api.tvmaze.com/characters/53168',
+            },
+          },
+        },
+        self: false,
+        voice: false,
+      },
+      {
+        person: {
+          id: 34502,
+          url: 'https://www.tvmaze.com/people/34502/david-blue',
+          name: 'David Blue',
+          country: {
+            name: 'United States',
+            code: 'US',
+            timezone: 'America/New_York',
+          },
+          birthday: '1982-01-17',
+          deathday: null,
+          gender: 'Male',
+          image: {
+            medium: 'https://static.tvmaze.com/uploads/images/medium_portrait/3/8411.jpg',
+            original: 'https://static.tvmaze.com/uploads/images/original_untouched/3/8411.jpg',
+          },
+          updated: 1668196974,
+          _links: {
+            self: {
+              href: 'https://api.tvmaze.com/people/34502',
+            },
+          },
+        },
+        character: {
+          id: 53169,
+          url: 'https://www.tvmaze.com/characters/53169/stargate-universe-eli-wallace',
+          name: 'Eli Wallace',
+          image: {
+            medium: 'https://static.tvmaze.com/uploads/images/medium_portrait/1/3087.jpg',
+            original: 'https://static.tvmaze.com/uploads/images/original_untouched/1/3087.jpg',
+          },
+          _links: {
+            self: {
+              href: 'https://api.tvmaze.com/characters/53169',
+            },
+          },
+        },
+        self: false,
+        voice: false,
+      },
+      {
+        person: {
+          id: 4488,
+          url: 'https://www.tvmaze.com/people/4488/alaina-huffman',
+          name: 'Alaina Huffman',
+          country: {
+            name: 'Canada',
+            code: 'CA',
+            timezone: 'America/Halifax',
+          },
+          birthday: '1980-04-17',
+          deathday: null,
+          gender: 'Female',
+          image: {
+            medium: 'https://static.tvmaze.com/uploads/images/medium_portrait/3/8412.jpg',
+            original: 'https://static.tvmaze.com/uploads/images/original_untouched/3/8412.jpg',
+          },
+          updated: 1693308385,
+          _links: {
+            self: {
+              href: 'https://api.tvmaze.com/people/4488',
+            },
+          },
+        },
+        character: {
+          id: 53170,
+          url: 'https://www.tvmaze.com/characters/53170/stargate-universe-tamara-johansen',
+          name: 'Tamara Johansen',
+          image: {
+            medium: 'https://static.tvmaze.com/uploads/images/medium_portrait/1/3090.jpg',
+            original: 'https://static.tvmaze.com/uploads/images/original_untouched/1/3090.jpg',
+          },
+          _links: {
+            self: {
+              href: 'https://api.tvmaze.com/characters/53170',
+            },
+          },
+        },
+        self: false,
+        voice: false,
+      },
+      {
+        person: {
+          id: 3393,
+          url: 'https://www.tvmaze.com/people/3393/jamil-walker-smith',
+          name: 'Jamil Walker Smith',
+          country: {
+            name: 'United States',
+            code: 'US',
+            timezone: 'America/New_York',
+          },
+          birthday: '1982-08-20',
+          deathday: null,
+          gender: 'Male',
+          image: {
+            medium: 'https://static.tvmaze.com/uploads/images/medium_portrait/3/8413.jpg',
+            original: 'https://static.tvmaze.com/uploads/images/original_untouched/3/8413.jpg',
+          },
+          updated: 1713972541,
+          _links: {
+            self: {
+              href: 'https://api.tvmaze.com/people/3393',
+            },
+          },
+        },
+        character: {
+          id: 53171,
+          url: 'https://www.tvmaze.com/characters/53171/stargate-universe-ronald-greer',
+          name: 'Ronald Greer',
+          image: {
+            medium: 'https://static.tvmaze.com/uploads/images/medium_portrait/1/3089.jpg',
+            original: 'https://static.tvmaze.com/uploads/images/original_untouched/1/3089.jpg',
+          },
+          _links: {
+            self: {
+              href: 'https://api.tvmaze.com/characters/53171',
+            },
+          },
+        },
+        self: false,
+        voice: false,
+      },
+      {
+        person: {
+          id: 6079,
+          url: 'https://www.tvmaze.com/people/6079/ming-na-wen',
+          name: 'Ming-Na Wen',
+          country: {
+            name: 'Macao',
+            code: 'MO',
+            timezone: 'Asia/Macau',
+          },
+          birthday: '1963-11-20',
+          deathday: null,
+          gender: 'Female',
+          image: {
+            medium: 'https://static.tvmaze.com/uploads/images/medium_portrait/2/5935.jpg',
+            original: 'https://static.tvmaze.com/uploads/images/original_untouched/2/5935.jpg',
+          },
+          updated: 1714060618,
+          _links: {
+            self: {
+              href: 'https://api.tvmaze.com/people/6079',
+            },
+          },
+        },
+        character: {
+          id: 53172,
+          url: 'https://www.tvmaze.com/characters/53172/stargate-universe-camille-wray',
+          name: 'Camille Wray',
+          image: {
+            medium: 'https://static.tvmaze.com/uploads/images/medium_portrait/1/3091.jpg',
+            original: 'https://static.tvmaze.com/uploads/images/original_untouched/1/3091.jpg',
+          },
+          _links: {
+            self: {
+              href: 'https://api.tvmaze.com/characters/53172',
+            },
+          },
+        },
+        self: false,
+        voice: false,
+      },
+    ],
+  },
+};
+
+export const mockShowsList = [mockShow, mockShow2];
