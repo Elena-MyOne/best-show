@@ -1,6 +1,6 @@
 {
   "homepage": "https://elena-myone.github.io/best-show",
-  "name": "best_show",
+  "name": "best-show",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -41,6 +41,7 @@
     "@typescript-eslint/eslint-plugin": "^7.2.0",
     "@typescript-eslint/parser": "^7.2.0",
     "@vitejs/plugin-react": "^4.2.1",
+    "@vitest/coverage-v8": "^0.34.6",
     "enzyme": "^3.11.0",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.0.0",
