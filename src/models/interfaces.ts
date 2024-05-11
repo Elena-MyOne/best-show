@@ -52,7 +52,7 @@ interface NetworkData {
   id: number;
   name: string;
   country: CountryData;
-  officialSite: string;
+  officialSite: string | null;
 }
 
 interface CountryData {
@@ -106,8 +106,8 @@ export interface PersonData {
     code: string;
     timezone: string;
   };
-  birthday: null | number;
-  deathday: null | number;
+  birthday: null | string;
+  deathday: null | string;
   gender: string;
   image: {
     medium: string;
