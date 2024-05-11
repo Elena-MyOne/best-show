@@ -12,44 +12,52 @@
 
 .cards {
   margin: 40px 0px;
-  display: grid;
-  grid-template-columns: repeat(5, auto);
-  justify-content: center;
-  align-items: start;
-  gap: 40px;
-  @media (max-width: 1200px) {
-    grid-template-columns: repeat(3, auto);
-  }
-  @media (max-width: ($md3+px)) {
-    grid-template-columns: repeat(2, auto);
-  }
-  @media (max-width: ($md4+px)) {
-    grid-template-columns: repeat(1, auto);
-  }
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  //   display: grid;
+  //   grid-template-columns: repeat(5, auto);
+  //   justify-content: center;
+  //   align-items: start;
+  //   gap: 40px;
+  //   @media (max-width: 1200px) {
+  //     grid-template-columns: repeat(3, auto);
+  //   }
+  //   @media (max-width: ($md3+px)) {
+  //     grid-template-columns: repeat(2, auto);
+  //   }
+  //   @media (max-width: ($md4+px)) {
+  //     grid-template-columns: repeat(1, auto);
+  //   }
 }
 
 .card {
-  width: 200px;
+  width: 310px;
   background-color: #000;
   height: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
   border-radius: 15px;
 }
 
 .content {
   padding: 15px;
+  flex: 0 1 50%;
 }
 
 .image {
+  flex: 0 1 50%;
   img {
     width: 100%;
     border-radius: 15px;
+    object-fit: contain;
   }
 }
 
 .cover {
+  flex: 0 1 50%;
   border-radius: 15px;
   background-color: $hoverActiveColor;
   color: $fontColor;

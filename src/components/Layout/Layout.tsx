@@ -7,15 +7,15 @@ import ErrorBoundary from '../ErrorBoundary/ErrorBoundary';
 const Layout: React.FC = () => {
   return (
     <div className="wrapper">
-      {/* <ErrorBoundary> */}
-      <Header />
-      <main className="main">
-        <div className="container">
-          <Outlet />
-        </div>
-      </main>
-      <Footer />
-      {/* </ErrorBoundary> */}
+      <ErrorBoundary>
+        <Header />
+        <main className="main">
+          <div className="container">
+            <Outlet />
+          </div>
+        </main>
+        <Footer />
+      </ErrorBoundary>
     </div>
   );
 };
