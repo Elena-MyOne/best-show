@@ -1,0 +1,52 @@
+@import '../../styles/variables.scss';
+
+.episodes {
+  display: flex;
+  gap: 30px;
+}
+
+.body {
+  width: 250px;
+  background-color: #000;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  user-select: none;
+  height: 100%;
+}
+
+.image {
+  width: 250px;
+  height: 140px;
+  background-color: $borderColor;
+  border-radius: 10px;
+
+  img {
+    border-radius: 10px;
+  }
+}
+
+.content {
+  padding: 10px;
+  flex: 1 1 auto;
+}
+
+.name {
+  padding: 10px 0px;
+  text-align: center;
+}
+
+.rating {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  padding-bottom: 10px;
+  justify-content: center;
+}
+
+.airdate {
+  text-align: right;
+  padding: 10px;
+  opacity: 0.8;
+}

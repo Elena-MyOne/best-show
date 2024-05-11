@@ -12,6 +12,7 @@ $fontFamily: 'Hind', sans;
 $fontColor: #f0ecec;
 $bgColor: #0f1014;
 $borderColor: #21242b;
+$lightBorderColor: rgba(255, 255, 255, 0.4);
 $hoverColor: #ec8f32;
 $hoverActiveColor: #169a9a;
 $errorColor: rgba(181, 26, 26, 1);
@@ -29,5 +30,5 @@ $transition: all 0.3s ease 0s;
 }
 
 @mixin splitter {
-  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  border-top: 1px solid $lightBorderColor;
 }

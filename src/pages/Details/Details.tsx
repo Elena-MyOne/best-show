@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import style from './DetailsPage.module.scss';
+import style from './Details.module.scss';
 import { AiFillStar } from 'react-icons/ai';
 import { GoLinkExternal } from 'react-icons/go';
 import { useNavigate, useParams } from 'react-router-dom';
@@ -8,6 +8,7 @@ import { ROUTER_PATHS } from '../../models/enums';
 import { CastData, ShowData } from '../../models/interfaces';
 import Spinner from '../../components/Spinner/Spinner';
 import Cast from './Cast/Cast';
+import Seasons from './Seasons/Seasons';
 
 const Details: React.FC = () => {
   const noDate = 'no data to show';
@@ -128,6 +129,7 @@ const Details: React.FC = () => {
               Go Back
             </button>
           </div>
+          <Seasons id={id} />
           <Cast cast={show.cast} />
         </>
       )}
