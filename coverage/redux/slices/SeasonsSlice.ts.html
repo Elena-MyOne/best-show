@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for components/CardItems/CardItems.tsx</title>
+    <title>Code coverage report for redux/slices/SeasonsSlice.ts</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">components/CardItems</a> CardItems.tsx</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">redux/slices</a> SeasonsSlice.ts</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">93.33% </span>
+                <span class="strong">88.57% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>28/30</span>
-            </div>
-        
-            
-            <div class='fl pad1y space-right2'>
-                <span class="strong">66.66% </span>
-                <span class="quiet">Branches</span>
-                <span class='fraction'>2/3</span>
+                <span class='fraction'>31/35</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
-                <span class="quiet">Functions</span>
-                <span class='fraction'>1/1</span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">93.33% </span>
+                <span class="strong">0% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/3</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">88.57% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>28/30</span>
+                <span class='fraction'>31/35</span>
             </div>
         
             
@@ -93,7 +93,12 @@
 <a name='L28'></a><a href='#L28'>28</a>
 <a name='L29'></a><a href='#L29'>29</a>
 <a name='L30'></a><a href='#L30'>30</a>
-<a name='L31'></a><a href='#L31'>31</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -108,13 +113,19 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -122,37 +133,41 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
-import style from './CardItems.module.scss';
-import { SearchShowsData, ShowData } from '../../models/interfaces';
-import Card from '../Card/Card';
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { PayloadAction, createSlice } from '@reduxjs/toolkit';
+import { EpisodeData } from '../../models/interfaces';
+import { RootState } from '../store';
 &nbsp;
-interface CardItemsProps {
-  shows: ShowData[] | SearchShowsData[];
+export interface EpisodesState {
+  id: string;
+  episodes: EpisodeData[];
+  isLoading: boolean;
+  isError: boolean;
 }
 &nbsp;
-const CardItems: React.FC&lt;CardItemsProps&gt; = ({ shows }) =&gt; {
-  return (
-    &lt;div className={style.items}&gt;
-      {Array.isArray(shows) &amp;&amp; shows.length &gt; 0 &amp;&amp; (
-        &lt;div className={style.shows}&gt;
-          {shows.map((item) =&gt; {
-            if (Object.prototype.hasOwnProperty.call(item, 'show')) <span class="branch-0 cbranch-no" title="branch not covered" >{</span>
-<span class="cstat-no" title="statement not covered" >              const showItem = item as SearchShowsData;</span>
-<span class="cstat-no" title="statement not covered" >              return &lt;Card key={showItem.show.id} show={showItem.show} /&gt;;</span>
-            } else {
-              const show = item as ShowData;
-              return &lt;Card key={show.id} show={show} /&gt;;
-            }
-          })}
-        &lt;/div&gt;
-      )}
-    &lt;/div&gt;
-  );
+const initialState: EpisodesState = {
+  id: '',
+  episodes: [],
+  isLoading: false,
+  isError: false,
 };
 &nbsp;
-export default CardItems;
+export const EpisodesSlice = createSlice({
+  name: 'episodes',
+  initialState,
+  reducers: {
+<span class="fstat-no" title="function not covered" >    setId(state, action: PayloadAction&lt;string&gt;) {</span>
+<span class="cstat-no" title="statement not covered" >      state.id = action.payload;</span>
+<span class="cstat-no" title="statement not covered" >    },</span>
+<span class="fstat-no" title="function not covered" >    setEpisodes(state, action: PayloadAction&lt;EpisodeData[]&gt;) {</span>
+<span class="cstat-no" title="statement not covered" >      state.episodes = action.payload;</span>
+<span class="cstat-no" title="statement not covered" >    },</span>
+  },
+});
+&nbsp;
+export const selectEpisodes = <span class="fstat-no" title="function not covered" >(state: RootState): EpisodesState =&gt; state.episodes;</span>
+&nbsp;
+export const { setId, setEpisodes } = EpisodesSlice.actions;
+export default EpisodesSlice.reducer;
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->

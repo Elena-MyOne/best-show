@@ -45,7 +45,7 @@ const Header: React.FC = () => {
 
   return (
     <header className={style.header}>
-      <div className={`${style.body} container`}>
+      <div className={`${style.body} container`} data-testid="header-logo">
         <Logo />
         <form className={style.search} onSubmit={handleSearchForm} data-testid="search-form">
           <input
@@ -55,7 +55,11 @@ const Header: React.FC = () => {
             onChange={handleChange}
             value={inputValue}
           />
-          <button className={style.button} onClick={handleButtonClick}>
+          <button
+            className={style.button}
+            onClick={handleButtonClick}
+            data-testid="header-submit-button"
+          >
             <BsSearch />
           </button>
         </form>
