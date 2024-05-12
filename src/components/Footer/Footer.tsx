@@ -50,7 +50,11 @@ const Footer: React.FC = () => {
                 className={style.input}
                 autoComplete="off"
               />
-              <button className={style.button} onClick={handleButtonClick}>
+              <button
+                className={style.button}
+                onClick={handleButtonClick}
+                data-testid="footer-submit-button"
+              >
                 <BsSearch />
               </button>
             </form>

@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for components/Dropdown/Dropdown.tsx</title>
+    <title>Code coverage report for redux/slices/PeopleSlice.ts</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">components/Dropdown</a> Dropdown.tsx</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">redux/slices</a> PeopleSlice.ts</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">80% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>38/38</span>
+                <span class='fraction'>32/40</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>8/8</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>4/4</span>
+                <span class='fraction'>0/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">80% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>38/38</span>
+                <span class='fraction'>32/40</span>
             </div>
         
             
@@ -101,7 +101,9 @@
 <a name='L36'></a><a href='#L36'>36</a>
 <a name='L37'></a><a href='#L37'>37</a>
 <a name='L38'></a><a href='#L38'>38</a>
-<a name='L39'></a><a href='#L39'>39</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -112,71 +114,75 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { useState } from 'react';
-import style from './Dropdown.module.scss';
-import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md';
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { PayloadAction, createSlice } from '@reduxjs/toolkit';
+import { SearchPeopleData } from '../../models/interfaces';
+import { RootState } from '../store';
 &nbsp;
-interface DropdownProps {
-  options: number[];
-  selectedSeason: number;
-  setSelectedSeason: React.Dispatch&lt;React.SetStateAction&lt;number&gt;&gt;;
+export interface SearchPeopleState {
+  searchPerson: string;
+  people: SearchPeopleData[];
+  isLoading: boolean;
+  isError: boolean;
 }
 &nbsp;
-const Dropdown: React.FC&lt;DropdownProps&gt; = ({ options, selectedSeason, setSelectedSeason }) =&gt; {
-  const [isActive, seIsActive] = useState&lt;boolean&gt;(false);
-&nbsp;
-  const handelClick = (season: number): void =&gt; {
-    setSelectedSeason(season);
-    seIsActive(false);
-  };
-&nbsp;
-  return (
-    &lt;div className={style.dropdown}&gt;
-      &lt;div className={style.button} onClick={() =&gt; seIsActive(!isActive)}&gt;
-        &lt;span&gt;Season {selectedSeason}&lt;/span&gt;
-        &lt;span&gt;{isActive ? &lt;MdKeyboardArrowUp /&gt; : &lt;MdKeyboardArrowDown /&gt;}&lt;/span&gt;
-      &lt;/div&gt;
-      {isActive &amp;&amp; (
-        &lt;div className={style.content}&gt;
-          {options.map((item) =&gt; (
-            &lt;div className={style.item} key={item} onClick={() =&gt; handelClick(item)}&gt;
-              Season {item}
-            &lt;/div&gt;
-          ))}
-        &lt;/div&gt;
-      )}
-    &lt;/div&gt;
-  );
+const initialState: SearchPeopleState = {
+  searchPerson: '',
+  people: [],
+  isLoading: false,
+  isError: false,
 };
 &nbsp;
-export default Dropdown;
+export const PeopleSlice = createSlice({
+  name: 'people',
+  initialState,
+  reducers: {
+<span class="fstat-no" title="function not covered" >    setSearchPerson(state, action: PayloadAction&lt;string&gt;) {</span>
+<span class="cstat-no" title="statement not covered" >      state.searchPerson = action.payload;</span>
+<span class="cstat-no" title="statement not covered" >    },</span>
+<span class="fstat-no" title="function not covered" >    setPeople(state, action: PayloadAction&lt;SearchPeopleData[]&gt;) {</span>
+<span class="cstat-no" title="statement not covered" >      state.people = action.payload;</span>
+<span class="cstat-no" title="statement not covered" >    },</span>
+<span class="fstat-no" title="function not covered" >    setIsLoading(state, action: PayloadAction&lt;boolean&gt;) {</span>
+<span class="cstat-no" title="statement not covered" >      state.isLoading = action.payload;</span>
+<span class="cstat-no" title="statement not covered" >    },</span>
+<span class="fstat-no" title="function not covered" >    setIsError(state, action: PayloadAction&lt;boolean&gt;) {</span>
+<span class="cstat-no" title="statement not covered" >      state.isError = action.payload;</span>
+<span class="cstat-no" title="statement not covered" >    },</span>
+  },
+});
+&nbsp;
+export const selectPeople = <span class="fstat-no" title="function not covered" >(state: RootState): SearchPeopleState =&gt; state.people;</span>
+export const { setSearchPerson, setPeople, setIsLoading, setIsError } = PeopleSlice.actions;
+export default PeopleSlice.reducer;
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
