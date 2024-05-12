@@ -34,7 +34,7 @@ const EpisodesList: React.FC<EpisodesListProps> = ({ episodesList }) => {
   };
 
   return (
-    <>
+    <div>
       <Carousel responsive={responsive}>
         {episodesList.map((episode) => (
           <div key={episode.id} className={style.body}>
@@ -61,7 +61,7 @@ const EpisodesList: React.FC<EpisodesListProps> = ({ episodesList }) => {
           </div>
         ))}
       </Carousel>
-    </>
+    </div>
   );
 };
 
