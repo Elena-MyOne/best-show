@@ -63,14 +63,25 @@ const Pagination: React.FC = () => {
 
   return (
     <div className={style.buttons}>
-      <button className={style.prev} disabled={isPrevDisabled} onClick={handlePrevButton}>
+      <button
+        className={style.prev}
+        disabled={isPrevDisabled}
+        onClick={handlePrevButton}
+        data-testid="prev-button"
+      >
         <MdOutlineArrowBackIos />
       </button>
 
-      <button className={style.current}>{currentPage + 1}</button>
+      <button className={style.current} data-testid="current-button">
+        {currentPage + 1}
+      </button>
 
       {currentPage < LAST_PAGE && (
-        <button className={style.nextCurrent} onClick={handleNextButton}>
+        <button
+          className={style.nextCurrent}
+          onClick={handleNextButton}
+          data-testid="next-current-button"
+        >
           {currentPage + 2}
         </button>
       )}
@@ -78,7 +89,7 @@ const Pagination: React.FC = () => {
       {currentPage < LAST_PAGE - 1 && <div className={style.dots}>...</div>}
 
       {currentPage < LAST_PAGE - 1 && (
-        <button className={style.last} onClick={handleLast}>
+        <button className={style.last} onClick={handleLast} data-testid="last-button">
           {LAST_PAGE + 1}
         </button>
       )}
@@ -87,7 +98,7 @@ const Pagination: React.FC = () => {
         className={style.next}
         disabled={isNextDisabled}
         onClick={handleNextButton}
-        data-testid="next"
+        data-testid="next-button"
       >
         <MdOutlineArrowForwardIos />
       </button>
