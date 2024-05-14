@@ -105,7 +105,7 @@ export interface PersonData {
     name: string;
     code: string;
     timezone: string;
-  };
+  } | null;
   birthday: null | string;
   deathday: null | string;
   gender: string;

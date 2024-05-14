@@ -13,7 +13,7 @@ const Cast: React.FC<CastProps> = ({ cast }) => {
       <h3 className={style.title}>Cast</h3>
       <div className={style.cards}>
         {cast.map((item) => (
-          <div key={item.character.id} className={style.card}>
+          <div key={item.character.id} className={style.card} data-testid="cast-card">
             {item.character.image ? (
               <div className={style.image}>
                 <img src={item.character.image.medium} alt="cover" />
