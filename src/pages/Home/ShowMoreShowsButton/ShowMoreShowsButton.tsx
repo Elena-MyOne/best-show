@@ -16,7 +16,12 @@ const ShowMoreShowsButton: React.FC<ShowMoreShowsButtonProps> = ({
 
   return (
     <div className={style.more}>
-      <button className="button" onClick={showMoreShows} disabled={switchMoreShows}>
+      <button
+        className="button"
+        onClick={showMoreShows}
+        disabled={switchMoreShows}
+        data-testid={'show-more-shows-button'}
+      >
         {isMoreShows ? 'Show less' : 'Show more'}
       </button>
     </div>
