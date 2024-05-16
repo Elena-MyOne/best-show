@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for components/CardGoOfficialSiteLink/CardGoOfficialSiteLink.tsx</title>
+    <title>Code coverage report for components/PeopleItems/PeopleItems.tsx</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -19,7 +19,7 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">components/CardGoOfficialSiteLink</a> CardGoOfficialSiteLink.tsx</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">components/PeopleItems</a> PeopleItems.tsx</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
@@ -32,7 +32,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>1/1</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
@@ -93,42 +93,42 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">16x</span>
-<span class="cline-any cline-yes">16x</span>
-<span class="cline-any cline-yes">16x</span>
-<span class="cline-any cline-yes">16x</span>
-<span class="cline-any cline-yes">16x</span>
-<span class="cline-any cline-yes">16x</span>
-<span class="cline-any cline-yes">16x</span>
-<span class="cline-any cline-yes">16x</span>
-<span class="cline-any cline-yes">16x</span>
-<span class="cline-any cline-yes">16x</span>
-<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
-import style from './CardGoOfficialSiteLink.module.scss';
-import { GoLinkExternal } from 'react-icons/go';
+import { useSelector } from 'react-redux';
+import { selectPeople } from '../../redux/slices/PeopleSlice';
+import style from './PeopleItems.module.scss';
 &nbsp;
-interface CardGoOfficialSiteLinkProps {
-  url: string;
-}
+import PersonCard from './PersonCard/PersonCard';
 &nbsp;
-const CardGoOfficialSiteLink: React.FC&lt;CardGoOfficialSiteLinkProps&gt; = ({ url }) =&gt; {
+const PeopleItems: React.FC = () =&gt; {
+  const { people } = useSelector(selectPeople);
+&nbsp;
   return (
-    &lt;div className={style.link}&gt;
-      &lt;a href={url} className="link" target="_blank" rel="noopener noreferrer"&gt;
-        &lt;span&gt;
-          &lt;GoLinkExternal /&gt;
-        &lt;/span&gt;
-        &lt;span&gt;Go to official site&lt;/span&gt;
-      &lt;/a&gt;
-    &lt;/div&gt;
+    &lt;&gt;
+      &lt;div className={style.people}&gt;
+        {people.map((person) =&gt; (
+          &lt;PersonCard key={person.person.id} person={person.person} /&gt;
+        ))}
+      &lt;/div&gt;
+    &lt;/&gt;
   );
 };
 &nbsp;
-export default CardGoOfficialSiteLink;
+export default PeopleItems;
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->

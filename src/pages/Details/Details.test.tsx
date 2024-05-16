@@ -1,10 +1,10 @@
 import { act, fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { Provider } from 'react-redux';
-import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { store } from '../../redux/store';
 import { BrowserRouter } from 'react-router-dom';
 import Details from './Details';
-import { mockShow } from '../../data/mockShow';
+import { mockShow } from '../../mocks/mockShow';
 
 const MockDetailsPage = () => {
   return (
@@ -27,6 +27,10 @@ describe('Details page', () => {
     await act(async () => {
       render(<MockDetailsPage />);
     });
+  });
+
+  afterEach(() => {
+    global.fetch = vi.fn().mockImplementation(() => {});
   });
 
   it('the detailed card component correctly displays the detailed card data', async () => {

@@ -1,5 +1,5 @@
 import CardItems from './CardItems';
-import { mockShowsList } from '../../data/mockShow';
+import { mockShowsList } from '../../mocks/mockShow';
 import { BrowserRouter } from 'react-router-dom';
 import { act, render, screen, waitFor } from '@testing-library/react';
 import { beforeEach, describe, expect, it, vi } from 'vitest';

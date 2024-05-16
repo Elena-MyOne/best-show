@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import style from './People.module.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { selectPeople, setPeople } from '../../redux/slices/PeopleSlice';
+import { selectPeople, setIsError, setIsLoading, setPeople } from '../../redux/slices/PeopleSlice';
 import { MdOutlineKeyboardDoubleArrowLeft } from 'react-icons/md';
 import PeopleItems from '../../components/PeopleItems/PeopleItems';
 import { ROUTER_PATHS } from '../../models/enums';
@@ -24,6 +24,11 @@ const People: React.FC = () => {
     }
   }, [searchPerson, data, dispatch]);
 
+  useEffect(() => {
+    setIsError(isError);
+    setIsLoading(isLoading);
+  }, [isError, isLoading]);
+
   return (
     <section className={style.section}>
       <button className={style.button} onClick={() => navigate(`/${ROUTER_PATHS.HOME}`)}>
@@ -42,12 +47,12 @@ const People: React.FC = () => {
           {isError && (
             <div className={style.error}>
               <BiError />
-              <span>Oops error</span>
+              <span>Oops error accrued! Cannot show searched actors list</span>
             </div>
           )}
         </>
       ) : (
-        <div className={style.empty}>Nothing to show</div>
+        <p className={style.empty}>Nothing to show</p>
       )}
     </section>
   );

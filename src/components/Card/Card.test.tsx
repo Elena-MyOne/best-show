@@ -1,6 +1,6 @@
 import { BrowserRouter } from 'react-router-dom';
 import Card from './Card';
-import { mockShow } from '../../data/mockShow';
+import { mockShow } from '../../mocks/mockShow';
 import { describe, expect, it } from 'vitest';
 import { fireEvent, render, screen } from '@testing-library/react';
 

@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import { describe, expect, it } from 'vitest';
 import PersonCard from './PersonCard';
-import { mockPerson } from '../../../data/mockPeople';
+import { mockPerson } from '../../../mocks/mockPeople';
 
 const MockPersonCard = () => {
   return (
