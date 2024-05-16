@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1715899785048" clover="3.2.0">
-  <project timestamp="1715899785048" name="All files">
-    <metrics statements="2099" coveredstatements="2025" conditionals="110" coveredconditionals="90" methods="62" coveredmethods="46" elements="2271" coveredelements="2161" complexity="0" loc="2099" ncloc="2099" packages="26" files="33" classes="33"/>
+<coverage generated="1715900067709" clover="3.2.0">
+  <project timestamp="1715900067709" name="All files">
+    <metrics statements="2084" coveredstatements="2014" conditionals="109" coveredconditionals="89" methods="60" coveredmethods="46" elements="2253" coveredelements="2149" complexity="0" loc="2084" ncloc="2084" packages="26" files="33" classes="33"/>
     <package name="components.Card">
       <metrics statements="52" coveredstatements="48" conditionals="12" coveredconditionals="10" methods="1" coveredmethods="1"/>
       <file name="Card.tsx" path="E:\Asgard\Portfolio\best-show\src\components\Card\Card.tsx">
@@ -1949,9 +1949,9 @@
       </file>
     </package>
     <package name="pages.People">
-      <metrics statements="61" coveredstatements="61" conditionals="9" coveredconditionals="9" methods="2" coveredmethods="1"/>
+      <metrics statements="56" coveredstatements="56" conditionals="8" coveredconditionals="8" methods="2" coveredmethods="1"/>
       <file name="People.tsx" path="E:\Asgard\Portfolio\best-show\src\pages\People\People.tsx">
-        <metrics statements="61" coveredstatements="61" conditionals="9" coveredconditionals="9" methods="2" coveredmethods="1"/>
+        <metrics statements="56" coveredstatements="56" conditionals="8" coveredconditionals="8" methods="2" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -1978,41 +1978,36 @@
         <line num="24" count="1" type="stmt"/>
         <line num="25" count="9" type="stmt"/>
         <line num="26" count="9" type="stmt"/>
-        <line num="27" count="9" type="cond" truecount="1" falsecount="0"/>
-        <line num="28" count="5" type="stmt"/>
-        <line num="29" count="5" type="stmt"/>
+        <line num="27" count="9" type="stmt"/>
+        <line num="28" count="9" type="stmt"/>
+        <line num="29" count="9" type="stmt"/>
         <line num="30" count="9" type="stmt"/>
         <line num="31" count="9" type="stmt"/>
         <line num="32" count="9" type="stmt"/>
         <line num="33" count="9" type="stmt"/>
         <line num="34" count="9" type="stmt"/>
-        <line num="35" count="9" type="stmt"/>
-        <line num="36" count="9" type="stmt"/>
-        <line num="37" count="9" type="stmt"/>
-        <line num="38" count="9" type="stmt"/>
-        <line num="39" count="9" type="stmt"/>
-        <line num="40" count="9" type="cond" truecount="1" falsecount="0"/>
-        <line num="41" count="7" type="stmt"/>
-        <line num="42" count="7" type="stmt"/>
-        <line num="43" count="7" type="stmt"/>
-        <line num="44" count="7" type="stmt"/>
-        <line num="45" count="7" type="cond" truecount="1" falsecount="0"/>
-        <line num="46" count="7" type="cond" truecount="1" falsecount="0"/>
-        <line num="47" count="7" type="cond" truecount="1" falsecount="0"/>
-        <line num="48" count="1" type="stmt"/>
-        <line num="49" count="1" type="stmt"/>
-        <line num="50" count="1" type="stmt"/>
-        <line num="51" count="1" type="stmt"/>
-        <line num="52" count="7" type="stmt"/>
-        <line num="53" count="7" type="cond" truecount="1" falsecount="0"/>
-        <line num="54" count="2" type="stmt"/>
-        <line num="55" count="2" type="stmt"/>
-        <line num="56" count="9" type="stmt"/>
-        <line num="57" count="9" type="stmt"/>
-        <line num="58" count="9" type="stmt"/>
-        <line num="59" count="9" type="stmt"/>
-        <line num="60" count="1" type="stmt"/>
-        <line num="61" count="1" type="stmt"/>
+        <line num="35" count="9" type="cond" truecount="1" falsecount="0"/>
+        <line num="36" count="7" type="stmt"/>
+        <line num="37" count="7" type="stmt"/>
+        <line num="38" count="7" type="stmt"/>
+        <line num="39" count="7" type="stmt"/>
+        <line num="40" count="7" type="cond" truecount="1" falsecount="0"/>
+        <line num="41" count="7" type="cond" truecount="1" falsecount="0"/>
+        <line num="42" count="7" type="cond" truecount="1" falsecount="0"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
+        <line num="46" count="1" type="stmt"/>
+        <line num="47" count="7" type="stmt"/>
+        <line num="48" count="7" type="cond" truecount="1" falsecount="0"/>
+        <line num="49" count="2" type="stmt"/>
+        <line num="50" count="2" type="stmt"/>
+        <line num="51" count="9" type="stmt"/>
+        <line num="52" count="9" type="stmt"/>
+        <line num="53" count="9" type="stmt"/>
+        <line num="54" count="9" type="stmt"/>
+        <line num="55" count="1" type="stmt"/>
+        <line num="56" count="1" type="stmt"/>
       </file>
     </package>
     <package name="redux">
@@ -2079,9 +2074,9 @@
       </file>
     </package>
     <package name="redux.slices">
-      <metrics statements="179" coveredstatements="146" conditionals="6" coveredconditionals="6" methods="20" coveredmethods="6"/>
+      <metrics statements="169" coveredstatements="140" conditionals="6" coveredconditionals="6" methods="18" coveredmethods="6"/>
       <file name="PeopleSlice.ts" path="E:\Asgard\Portfolio\best-show\src\redux\slices\PeopleSlice.ts">
-        <metrics statements="40" coveredstatements="36" conditionals="3" coveredconditionals="3" methods="5" coveredmethods="3"/>
+        <metrics statements="30" coveredstatements="30" conditionals="3" coveredconditionals="3" methods="3" coveredmethods="3"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -2100,28 +2095,18 @@
         <line num="16" count="1" type="stmt"/>
         <line num="17" count="1" type="stmt"/>
         <line num="18" count="1" type="stmt"/>
-        <line num="19" count="1" type="stmt"/>
-        <line num="20" count="1" type="stmt"/>
-        <line num="21" count="1" type="stmt"/>
-        <line num="22" count="1" type="stmt"/>
-        <line num="23" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="24" count="2" type="stmt"/>
-        <line num="25" count="2" type="stmt"/>
-        <line num="26" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="27" count="3" type="stmt"/>
-        <line num="28" count="3" type="stmt"/>
+        <line num="19" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="20" count="2" type="stmt"/>
+        <line num="21" count="2" type="stmt"/>
+        <line num="22" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="23" count="3" type="stmt"/>
+        <line num="24" count="3" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="28" count="1" type="cond" truecount="1" falsecount="0"/>
         <line num="29" count="1" type="stmt"/>
-        <line num="30" count="0" type="stmt"/>
-        <line num="31" count="0" type="stmt"/>
-        <line num="32" count="1" type="stmt"/>
-        <line num="33" count="0" type="stmt"/>
-        <line num="34" count="0" type="stmt"/>
-        <line num="35" count="1" type="stmt"/>
-        <line num="36" count="1" type="stmt"/>
-        <line num="37" count="1" type="stmt"/>
-        <line num="38" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="39" count="1" type="stmt"/>
-        <line num="40" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
       </file>
       <file name="SeasonsSlice.ts" path="E:\Asgard\Portfolio\best-show\src\redux\slices\SeasonsSlice.ts">
         <metrics statements="35" coveredstatements="33" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="1"/>

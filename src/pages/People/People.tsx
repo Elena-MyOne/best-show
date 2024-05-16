@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import style from './People.module.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { selectPeople, setIsError, setIsLoading, setPeople } from '../../redux/slices/PeopleSlice';
+import { selectPeople, setPeople } from '../../redux/slices/PeopleSlice';
 import { MdOutlineKeyboardDoubleArrowLeft } from 'react-icons/md';
 import PeopleItems from '../../components/PeopleItems/PeopleItems';
 import { ROUTER_PATHS } from '../../models/enums';
@@ -23,11 +23,6 @@ const People: React.FC = () => {
       dispatch(setPeople(data));
     }
   }, [searchPerson, data, dispatch]);
-
-  useEffect(() => {
-    setIsError(isError);
-    setIsLoading(isLoading);
-  }, [isError, isLoading]);
 
   return (
     <section className={style.section}>
