@@ -1,5 +1,7 @@
 # Best Show
 
+![2](https://github.com/Elena-MyOne/best-show/assets/74279859/035038b3-7b0a-4413-ad79-c7f867da9e32)
+
 ## Overview
 
 This project aims to explore and demonstrate the integration of Redux Toolkit Query (RTK Query) with Redux for state management, focusing on TypeScript with MSW (Mock Service Worker) for testing. The main objective is to showcase the effective utilization of RTK Query within a Redux application, covering a significant portion of the provided API functionalities and ensuring comprehensive test coverage.
@@ -53,6 +55,8 @@ Husky
 8. Consistent code formatting using <b>Prettier</b> and <b>ESLint</b>.
 
 ## Test Coverage
+
+![1](https://github.com/Elena-MyOne/best-show/assets/74279859/14992173-0dd9-4978-a45e-857c2dcb4ab2)
 
 The project boasts an impressive test coverage across various components and functionalities:
 
