@@ -27,15 +27,15 @@ For more details about the available endpoints and data structures, refer to the
 
 ## Technologies Used
 
-React
-Redux Toolkit Query
-TypeScript
-Vitest
-MSW (Mock Service Worker)
-Vite
-ESLint
-Prettier
-Husky
+* React
+* Redux Toolkit Query
+* TypeScript
+* Vitest
+* MSW (Mock Service Worker)
+* Vite
+* ESLint
+* Prettier
+* Husky
 
 ## Features
 
