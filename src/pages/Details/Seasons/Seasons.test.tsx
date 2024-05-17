@@ -1,10 +1,10 @@
 import { act, render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
-import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import Seasons from './Seasons';
 import { Provider } from 'react-redux';
 import { store } from '../../../redux/store';
-import { mockEpisodesList } from '../../../data/mockEpisodes';
+import { mockEpisodesList } from '../../../mocks/mockEpisodes';
 
 const id = '207';
 
@@ -27,6 +27,10 @@ describe('Seasons component when it is error', () => {
     });
   });
 
+  afterEach(() => {
+    global.fetch = vi.fn().mockImplementation(() => {});
+  });
+
   it('should render error message when error ocurred', () => {
     const text = screen.getByText(
       'Something goes wrong, seasons are not available, please try again later'
@@ -46,6 +50,10 @@ describe('Seasons component when data resolved', () => {
     await act(async () => {
       render(<MockSeasons />);
     });
+  });
+
+  afterEach(() => {
+    global.fetch = vi.fn().mockImplementation(() => {});
   });
 
   it('should render episodes list', () => {

@@ -1,6 +1,6 @@
 import { BrowserRouter } from 'react-router-dom';
 import EpisodesList from './EpisodesList';
-import { mockEpisodesList } from '../../data/mockEpisodes';
+import { mockEpisodesList } from '../../mocks/mockEpisodes';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { act, render, screen } from '@testing-library/react';
 

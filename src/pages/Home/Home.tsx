@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useLoadShowsQuery, useSearchShowsQuery } from '../../redux/api/apiSlice';
 import style from './Home.module.scss';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch } from '../../redux/store';
 import {
@@ -23,7 +23,6 @@ const Home: React.FC = () => {
   const [isMoreShows, setIsMoreShows] = useState<boolean>(false);
 
   const navigate = useNavigate();
-  const location = useLocation();
 
   const { shows, searchValue, apiCallPage, isLoading } = useSelector(selectShows);
   const dispatch = useDispatch<AppDispatch>();
@@ -56,13 +55,6 @@ const Home: React.FC = () => {
     showsData && dispatch(loadShows(showsData));
   };
 
-  const closeDetails = () => {
-    const path = location.pathname;
-    if (path.includes('details')) {
-      navigate(`${ROUTER_PATHS.HOME}`);
-    }
-  };
-
   return (
     <section className={style.body}>
       <>
@@ -81,7 +73,7 @@ const Home: React.FC = () => {
         <>
           <div className={style.content}>
             {shows.length ? (
-              <div className={style.items} onClick={closeDetails}>
+              <div className={style.items}>
                 {isMoreShows ? <CardItems shows={shows} /> : <CardItems shows={currentPageItems} />}
               </div>
             ) : (

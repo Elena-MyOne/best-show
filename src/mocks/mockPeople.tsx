@@ -38,4 +38,7 @@ const mockPerson2 = {
   },
 };
 
-export const mockPeople = [mockPerson, mockPerson2];
+export const mockPeople = [
+  { score: 0.70710677, person: mockPerson },
+  { score: 0.5, person: mockPerson2 },
+];

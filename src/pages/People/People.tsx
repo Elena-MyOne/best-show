@@ -42,12 +42,12 @@ const People: React.FC = () => {
           {isError && (
             <div className={style.error}>
               <BiError />
-              <span>Oops error</span>
+              <span>Oops error accrued! Cannot show searched actors list</span>
             </div>
           )}
         </>
       ) : (
-        <div className={style.empty}>Nothing to show</div>
+        <p className={style.empty}>Nothing to show</p>
       )}
     </section>
   );

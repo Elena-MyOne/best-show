@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
-import { mockShow } from '../../../data/mockShow';
+import { mockShow } from '../../../mocks/mockShow';
 import { BrowserRouter } from 'react-router-dom';
 import Cast from './Cast';
 

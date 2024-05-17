@@ -1,35 +1,20 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import style from './Details.module.scss';
 import { AiFillStar } from 'react-icons/ai';
-import { GoLinkExternal } from 'react-icons/go';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useGetShowByIdQuery } from '../../redux/api/apiSlice';
 import { ROUTER_PATHS } from '../../models/enums';
-import { CastData, ShowData } from '../../models/interfaces';
+import { ShowData } from '../../models/interfaces';
 import Spinner from '../../components/Spinner/Spinner';
 import Cast from './Cast/Cast';
 import Seasons from './Seasons/Seasons';
+import CardGoOfficialSiteLink from '../../components/CardGoOfficialSiteLink/CardGoOfficialSiteLink';
+import { initialShow, noDate } from './detailsData';
 
 const Details: React.FC = () => {
-  const noDate = 'no data to show';
-
-  const [show, setShow] = useState({
-    id: 0,
-    image: '',
-    name: '',
-    rating: 0,
-    language: '',
-    summary: '',
-    genres: [noDate],
-    premiered: '',
-    ended: '',
-    officialSite: '',
-    cast: [] as CastData[],
-  });
-
+  const [show, setShow] = useState(initialShow);
   const { id } = useParams();
   const navigate = useNavigate();
-
   const { data, isLoading, isSuccess, isError, error } = useGetShowByIdQuery(id!);
 
   const goBack = () => {
@@ -72,7 +57,6 @@ const Details: React.FC = () => {
 
   const showStarted = show.premiered ? show.premiered.slice(0, 4) : '';
   const showEnded = show.ended ? '- ' + show.ended.slice(0, 4) : '';
-
   const years = `${showStarted} ${showEnded} `;
 
   return (
@@ -109,17 +93,7 @@ const Details: React.FC = () => {
                   <div className={style.genres}>Genres: {show.genres.join(', ')}</div>
                 )}
                 <div className={style.years}>{years}</div>
-                {show.officialSite && (
-                  <a
-                    href={show.officialSite}
-                    className={style.link}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <GoLinkExternal />
-                    <span>Go to official site</span>
-                  </a>
-                )}
+                {show.officialSite && <CardGoOfficialSiteLink url={show.officialSite} />}
               </div>
             </div>
             <div className={style.summary} data-testid="details-summary">
