@@ -5,15 +5,11 @@ import { RootState } from '../store';
 export interface EpisodesState {
   id: string;
   episodes: EpisodeData[];
-  isLoading: boolean;
-  isError: boolean;
 }
 
 const initialState: EpisodesState = {
   id: '',
   episodes: [],
-  isLoading: false,
-  isError: false,
 };
 
 export const EpisodesSlice = createSlice({

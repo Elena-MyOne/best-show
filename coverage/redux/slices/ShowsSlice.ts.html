@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">74.03% </span>
+                <span class="strong">83.65% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>77/104</span>
+                <span class='fraction'>87/104</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">85.71% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>6/7</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">16.66% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/12</span>
+                <span class='fraction'>6/12</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">74.03% </span>
+                <span class="strong">83.65% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>77/104</span>
+                <span class='fraction'>87/104</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -212,24 +212,11 @@
 <span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -240,8 +227,21 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -315,12 +315,12 @@ export const SearchSlice = createSlice({
       state.searchValue = action.payload;
     },
 &nbsp;
-<span class="fstat-no" title="function not covered" >    setShows(state, action: PayloadAction&lt;ShowData[] | SearchShowsData[]&gt;) {</span>
-<span class="cstat-no" title="statement not covered" >      state.shows = action.payload;</span>
-<span class="cstat-no" title="statement not covered" >    },</span>
-<span class="fstat-no" title="function not covered" >    setSwitchMoreShows(state, action: PayloadAction&lt;boolean&gt;) {</span>
-<span class="cstat-no" title="statement not covered" >      state.switchMoreShows = action.payload;</span>
-<span class="cstat-no" title="statement not covered" >    },</span>
+    setShows(state, action: PayloadAction&lt;ShowData[] | SearchShowsData[]&gt;) {
+      state.shows = action.payload;
+    },
+    setSwitchMoreShows(state, action: PayloadAction&lt;boolean&gt;) {
+      state.switchMoreShows = action.payload;
+    },
 <span class="fstat-no" title="function not covered" >    setIsIsLoading(state, action: PayloadAction&lt;boolean&gt;) {</span>
 <span class="cstat-no" title="statement not covered" >      state.isLoading = action.payload;</span>
 <span class="cstat-no" title="statement not covered" >    },</span>
@@ -331,9 +331,9 @@ export const SearchSlice = createSlice({
 <span class="fstat-no" title="function not covered" >    setCurrentPage(state, action: PayloadAction&lt;number&gt;) {</span>
 <span class="cstat-no" title="statement not covered" >      state.currentPage = action.payload;</span>
 <span class="cstat-no" title="statement not covered" >    },</span>
-<span class="fstat-no" title="function not covered" >    setApiCallPage(state, action: PayloadAction&lt;number&gt;) {</span>
-<span class="cstat-no" title="statement not covered" >      state.apiCallPage = action.payload;</span>
-<span class="cstat-no" title="statement not covered" >    },</span>
+    setApiCallPage(state, action: PayloadAction&lt;number&gt;) {
+      state.apiCallPage = action.payload;
+    },
 <span class="fstat-no" title="function not covered" >    setNextPage(state, action: PayloadAction&lt;number | null&gt;) {</span>
 <span class="cstat-no" title="statement not covered" >      state.nextPage = action.payload;</span>
 <span class="cstat-no" title="statement not covered" >    },</span>
@@ -341,11 +341,11 @@ export const SearchSlice = createSlice({
 <span class="cstat-no" title="statement not covered" >      state.prevPage = action.payload;</span>
 <span class="cstat-no" title="statement not covered" >    },</span>
 &nbsp;
-<span class="fstat-no" title="function not covered" >    loadShows(state, action: PayloadAction&lt;ShowData[] | SearchShowsData[]&gt;) {</span>
-<span class="cstat-no" title="statement not covered" >      state.shows = action.payload;</span>
-<span class="cstat-no" title="statement not covered" >      state.nextPage = state.currentPage + 1;</span>
-<span class="cstat-no" title="statement not covered" >      state.prevPage = state.currentPage &gt; 0 ? state.currentPage - 1 : null;</span>
-<span class="cstat-no" title="statement not covered" >    },</span>
+    loadShows(state, action: PayloadAction&lt;ShowData[] | SearchShowsData[]&gt;) {
+      state.shows = action.payload;
+      state.nextPage = state.currentPage + 1;
+      state.prevPage = state.currentPage &gt; <span class="branch-0 cbranch-no" title="branch not covered" >0 ? state.currentPage - 1 : n</span>ull;
+    },
 &nbsp;
 <span class="fstat-no" title="function not covered" >    handleSearch(state, action: PayloadAction&lt;ShowData[] | SearchShowsData[]&gt;) {</span>
 <span class="cstat-no" title="statement not covered" >      if (!state.searchValue) {</span>
@@ -382,7 +382,7 @@ export default SearchSlice.reducer;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-05-16T22:54:27.630Z
+                at 2024-05-17T02:51:37.349Z
             </div>
         <script src="../../prettify.js"></script>
         <script>
