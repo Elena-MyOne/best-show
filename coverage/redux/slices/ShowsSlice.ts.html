@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">83.65% </span>
+                <span class="strong">87.5% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>87/104</span>
+                <span class='fraction'>91/104</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">85.71% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>6/7</span>
+                <span class='fraction'>10/10</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">66.66% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>6/12</span>
+                <span class='fraction'>8/12</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">83.65% </span>
+                <span class="strong">87.5% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>87/104</span>
+                <span class='fraction'>91/104</span>
             </div>
         
             
@@ -218,30 +218,30 @@
 <span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -321,16 +321,16 @@ export const SearchSlice = createSlice({
     setSwitchMoreShows(state, action: PayloadAction&lt;boolean&gt;) {
       state.switchMoreShows = action.payload;
     },
-<span class="fstat-no" title="function not covered" >    setIsIsLoading(state, action: PayloadAction&lt;boolean&gt;) {</span>
-<span class="cstat-no" title="statement not covered" >      state.isLoading = action.payload;</span>
-<span class="cstat-no" title="statement not covered" >    },</span>
+    setIsIsLoading(state, action: PayloadAction&lt;boolean&gt;) {
+      state.isLoading = action.payload;
+    },
 <span class="fstat-no" title="function not covered" >    setIsError(state, action: PayloadAction&lt;boolean&gt;) {</span>
 <span class="cstat-no" title="statement not covered" >      state.isError = action.payload;</span>
 <span class="cstat-no" title="statement not covered" >    },</span>
 &nbsp;
-<span class="fstat-no" title="function not covered" >    setCurrentPage(state, action: PayloadAction&lt;number&gt;) {</span>
-<span class="cstat-no" title="statement not covered" >      state.currentPage = action.payload;</span>
-<span class="cstat-no" title="statement not covered" >    },</span>
+    setCurrentPage(state, action: PayloadAction&lt;number&gt;) {
+      state.currentPage = action.payload;
+    },
     setApiCallPage(state, action: PayloadAction&lt;number&gt;) {
       state.apiCallPage = action.payload;
     },
@@ -344,7 +344,7 @@ export const SearchSlice = createSlice({
     loadShows(state, action: PayloadAction&lt;ShowData[] | SearchShowsData[]&gt;) {
       state.shows = action.payload;
       state.nextPage = state.currentPage + 1;
-      state.prevPage = state.currentPage &gt; <span class="branch-0 cbranch-no" title="branch not covered" >0 ? state.currentPage - 1 : n</span>ull;
+      state.prevPage = state.currentPage &gt; 0 ? state.currentPage - 1 : null;
     },
 &nbsp;
 <span class="fstat-no" title="function not covered" >    handleSearch(state, action: PayloadAction&lt;ShowData[] | SearchShowsData[]&gt;) {</span>
@@ -382,7 +382,7 @@ export default SearchSlice.reducer;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-05-17T02:51:37.349Z
+                at 2024-05-17T03:11:02.558Z
             </div>
         <script src="../../prettify.js"></script>
         <script>
